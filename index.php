@@ -54,6 +54,9 @@ $db_available = !isset($GLOBALS['db_connection_error']);
                     <a href="php/index.php" class="btn btn-primary">Get Started</a>
                 <?php else: ?>
                     <a href="php/auth/login.php" class="btn btn-primary">Login</a>
+                    <div style="margin-top: 15px;">
+                        <span style="color: rgba(255,255,255,0.9);">New here? <a href="php/auth/register.php" style="color: #fff; text-decoration: underline; font-weight: 600;">Register now</a></span>
+                    </div>
                 <?php endif; ?>
             </div>
         </div>
