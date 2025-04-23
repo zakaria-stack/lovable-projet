@@ -56,52 +56,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Student Notes</title>
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="../../images/student_notes_logo.svg" alt="Student Notes Logo" class="site-logo">
-                <h1>Student Note</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="../../index.php">Home</a></li>
-                    <li class="active"><a href="login.php">Login</a></li>
-                    <li><a href="register.php">Register</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <div class="container">
+    <div class="auth-page login-page">
         <div class="auth-container">
-            <h1>Login</h1>
-            
+            <div class="logo" style="text-align: center; margin-bottom: 20px;">
+                <img src="../../images/student_notes_logo.svg" alt="Student Notes Logo" style="width: 60px;">
+            </div>
+            <h1>Welcome Back!</h1>
+
             <?php if(!empty($error)): ?>
                 <div class="alert alert-danger"><?php echo $error; ?></div>
             <?php endif; ?>
-            
-            <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+
+            <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="auth-form">
                 <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" name="username" id="username" required>
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="username" id="username" placeholder="Username" required>
                 </div>
-                
+
                 <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" required>
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
                 </div>
-                
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Login</button>
+
+                <button type="submit" class="btn-auth">Log In</button>
+
+                <div class="auth-footer">
+                    <p>Don't have an account? <a href="register.php">Register here</a></p>
                 </div>
-                
-                <p>Don't have an account? <a href="register.php">Register here</a></p>
             </form>
         </div>
     </div>
-
     <!-- Modern animated footer -->
     <footer class="footer-animate" role="contentinfo">
         <div class="waves" aria-hidden="true">
