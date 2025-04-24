@@ -17,7 +17,7 @@ $db_available = !isset($GLOBALS['db_connection_error']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Note - Your Study Companion</title>
+    <title>StudentNotes</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -26,7 +26,7 @@ $db_available = !isset($GLOBALS['db_connection_error']);
         <div class="container">
             <div class="logo">
                 <img src="images/student_notes_logo.svg" alt="Student Notes Logo" class="site-logo">
-                <h1>Student Note</h1>
+                <h1><span id="h1-span" >Student</span>Note</h1>
             </div>
             <nav>
                 <ul>
