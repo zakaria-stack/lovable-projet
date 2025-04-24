@@ -230,20 +230,28 @@ header nav ul li.active a {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #7b2cbf 0%, #9d4edd 100%);
+    position: relative;
     color: #fff;
     padding: 120px 0;
     text-align: center;
-    position: relative;
     overflow: hidden;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    background-image: 
-        radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 1%, transparent 1%),
-        radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 1%, transparent 1%),
-        radial-gradient(circle at 100% 0%, rgba(255,255,255,0.15) 20%, transparent 35%),
-        radial-gradient(circle at 0% 100%, rgba(255,255,255,0.15) 20%, transparent 35%);
-    background-size: 50px 50px, 50px 50px, 600px 600px, 600px 600px;
-    background-position: 0 0, 25px 25px, 100% 0%, 0% 100%;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(135deg, #7b2cbf 0%, #9d4edd 100%);
+    opacity: 0.97;
 }
 
 .hero::before {
